@@ -10,9 +10,24 @@ const Form = (props) => {
             ...formData, [event.target.name]: event.target.value
         })
     }
+    //  handleSubmit() will lift the state to App.js
+    const handleSubmit = (event) => {
+
+        event.preventDefault()
+
+        props.giphySearch(formData.searchTerm)
+
+        
+
+    }
   return (
 
-    <div>Form</div>
+    <div>
+        <form onSubmit={handleSubmit}>
+            <input type='text' name='searchTerm' value={formData.searchTerm} onChange={handleChange} />
+            <input type='submit' value='Submit' />
+        </form>
+    </div>
   )
 }
 
