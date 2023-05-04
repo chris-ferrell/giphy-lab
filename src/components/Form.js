@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 const Form = (props) => {
     // instantiate a instance of state
-    const [formData, setFormData] = useState({seachTerm: '', name: ''});
+    const [formData, setFormData] = useState({searchTerm: '', name: ''});
 
     // this function captures/updates the formData
     const handleChange = (event) => {
