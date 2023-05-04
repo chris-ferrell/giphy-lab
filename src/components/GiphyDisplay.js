@@ -1,12 +1,23 @@
 
-const GiphyDisplay = ({gif}) => {
-    // JSX can only return a single parent but it can have unlimited children
-    const loaded = () => {
-       return( 
-       <div>
-            <h1></h1>
-            <h2></h2>
-        </div>
-       );w
-    }
+
+const GiphyDisplay = ({giphy}) => {
+    
+const loaded = () => {
+  return (
+    <div>
+
+        <img src={giphy.data[0]embed_url}  />
+       
+    </div>
+  );
 }
+    // console.log(giphy.data[0].url)
+ const loading = () => {
+    return <h1>No Gif to display</h1>
+  }
+
+ return giphy ? loaded() : loading()
+
+};
+
+export default GiphyDisplay
