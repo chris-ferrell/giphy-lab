@@ -3,10 +3,11 @@
 const GiphyDisplay = ({giphy}) => {
     
 const loaded = () => {
+  console.log(giphy.data[0])
   return (
     <div>
 
-        <img src={giphy.data[0]embed_url}  />
+        <img src={giphy.data[0].images.original.url}  alt={giphy.data[0].username}/>
        
     </div>
   );
